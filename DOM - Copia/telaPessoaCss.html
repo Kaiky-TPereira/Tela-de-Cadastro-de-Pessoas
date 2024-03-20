@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telaPessoasCss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Tela de Pessoa</title>
+</head>
+<body style="background-color: rgb(104, 104, 104);"> 
+    <div style="border: 2px solid black; width: 800px; background-color: #d9edff; border-radius: 5px;">
+        <div style="background-color: #98c2e9; border: 1px solid black;">
+            <h3 style="margin: 1px;">Cadastro de Pessoas <span class="material-symbols-outlined">
+                </span></h3>
+        </div>
+            <fieldset>
+                <legend >Informações Básicas</legend>
+            <table>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label for="nome" style="color: red;">Nome</label>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 590px;" id="nome">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label style="color: red;" id="tipo">Tipo</label>
+                        <td>
+                            <select style="width: 180px;" id="select" onchange="tipoPessoa()">
+                                <option id="nada" value=""></option>
+                                <option id="fisico" value="fisico" onblur="mascaraCNPJ()">Físico</option>
+                                <option id="juridico" value="juridico" onblur="">Jurídico</option>
+                            </select>
+                        </td>
+                    </td>
+                    <td style="width: 120px; text-align: right;">
+                        <label style="color: red; padding-left: 153px;" id="informacao" >CPF/CNPJ</label>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 168px;" id="cpfcnpj" minlength="11" maxlength="14">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label>Núm. Telefone</label>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 172px;" id="telefone" onblur="mascaraTelefone()" maxlength="14" minlength="10" >
+                    </td>
+                </tr>
+            </table>
+            </fieldset>
+        <fieldset>
+                <legend>Endereço</legend>
+            <table>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label style="color: red;">Endereço</label>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 590px;" id="endereco">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label style="color: red;">Número</label>
+                        <td>
+                            <input type="number" style="width: 100px;" id="numero">
+                        </td>
+                    </td>
+                    <td style="width: 120px; text-align: right;">
+                        <label style="color: red;">CEP</label>
+                    </td>
+                    <td>
+                        <input type="number" style="width: 100px;" id="cep">
+                    </td>
+                    <td style="width: 120px; text-align: right;">
+                        <label>UF</label>
+                    </td>
+                    <td>
+                        <input type="number" style=" width: 50px;">
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label>Complemento</label>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 590px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 120px; text-align: right;">
+                        <label style="color: red;">Cidade</label>
+                    </td>
+                    <td>
+                        <input type="text" style="width: 590px;" id="cidade">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <div style="background-color: #98c2e9;">
+            <table id="table">
+                <tr>
+                    <td>
+                        <button class="box1" type="submit" id="btnCadastrar">Cadastrar</button>
+                    </td>
+                    <td>
+                        <button class="box2" type="submit" id="btnLimpar" name="limpar">Limpar</button>
+                    </td>
+                    <td>
+                        <button class="box2" type="reset" id="btnRandom">Random</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="telaPessoaCss.js"></script>
+</body>
+</html>
